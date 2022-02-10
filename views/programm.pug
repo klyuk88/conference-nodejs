@@ -1,0 +1,41 @@
+include head.pug
+
+main
+    section.page-name
+        h1.page-name__title=__('programm_1')
+        h3.page-name__conference=__('main_title_2')
+        .page-name__decoration-1
+        .page-name__decoration-2
+            .page-name__i-round-1
+            .page-name__i-round-2.
+
+
+            .page-name__i-round-3.
+    section.content.t-c-content
+        .content__inner
+            .text-block.conditions-t-block
+                .container
+                    .easyAccordion(data-option)
+                        each item, idx in pageData
+                            .easyAccordion__item(data-state=idx === 0 ? 'deploy': 'rolled')
+                                .easyAccordion__header
+                                    .easyAccordion__text-block
+                                        p.easyAccordion__header-text #{__('programm_2')} #{idx + 1}
+                                        p.easyAccordion__header-date=item.attributes.date
+                                    svg.accordion__triangle(version='1.1', xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 16 16', style='enable-background:new 0 0 16 16;', space='preserve')
+                                        g
+                                            path(style='fill:#fff;', d='M8,13l8-10H0L8,13z')
+                                .easyAccordion__content
+                                    .easyAccordion__content-inner
+                                        .p-day
+                                            .p-day__item
+                                                .p-day__left
+                                                    .p-day__text-block!=item.attributes.content
+                                                .p-day__right
+                                                    p=item.attributes.time
+        .form-decoration
+            img(src='/assets/img/4561.png', alt)
+
+
+
+include footer.pug

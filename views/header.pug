@@ -1,0 +1,75 @@
+header.header
+  .header__top
+    .header__top--inner
+      .logotypes
+        a.logotypes__item(href='/')
+          img(src='/assets/img/logotypes/sverhzvuk.png', alt)
+        a.logotypes__item(href='/')
+          img(src='/assets/img/logotypes/mai.png', alt)
+        a.logotypes__item(href='/')
+          img(src='/assets/img/logotypes/plane.png', alt)
+      .hamburger
+        div
+        div
+        div
+      .header__contacts
+        .header__c-item
+          i.fa.fa-phone(aria-hidden='true')
+          a(href='tel:+79099322602') #{globalPhone}
+        .header__c-item
+          i.fa.fa-envelope(aria-hidden='true')
+          a(href='mailto:hstd-conference@mail.ru') #{globalMail}
+        .header__c-item
+          i.fas.fa-language
+          if locale === 'ru'
+            a(href='?lang=en') En
+          else
+            a(href='?lang=ru') Ru
+  nav.header__nav
+    .header__nav--inner
+      ul.mmenu
+        li=__('menu_item_1')
+
+          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+            g
+              path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+          .mmenu-sub
+            ul.mmenu-sub__list
+              li
+                a(href='/')=__('menu_item_1_subitem_1')
+              li
+                a(href='/organizing-committee')=__('menu_item_1_subitem_2')
+              li
+                a(href='/programm-committee')=__('menu_item_1_subitem_3')
+              li
+                a(href='/key-speakers')=__('menu_item_1_subitem_4')
+              li
+                a(href='/major-dates')=__('menu_item_1_subitem_5')
+        li=__('menu_item_2')
+
+          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+            g
+              path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+          .mmenu-sub
+            ul.mmenu-sub__list
+              li
+                a(href='/registration')=__('menu_item_2_subitem_1')
+              li
+                a(href='/conditions')=__('menu_item_2_subitem_2')
+        li
+          a(href='/programm')=__('menu_item_6')
+        li=__('menu_item_3')
+
+          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+            g
+              path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+          .mmenu-sub
+            ul.mmenu-sub__list
+              li
+                a(href='/publication-rinc')=__('menu_item_3_subitem_1')
+              li
+                a(href='/publication-scopus')=__('menu_item_3_subitem_2')
+        li
+          a(href='/accommodation')=__('menu_item_4')
+        li
+          a(href='/contacts')=__('menu_item_5')

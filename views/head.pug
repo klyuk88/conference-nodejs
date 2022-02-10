@@ -1,0 +1,73 @@
+doctype html
+html(lang='ru_RU')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='Краткое описание страницы')
+    title=metaTitle
+    link(rel='shortcut icon', href='/assets/img/favicon.png', type='image/png')
+    link(rel='stylesheet', href='/assets/css/main.css')
+    link(rel='stylesheet', href='/assets/css/font-awesome.min.css')
+  body
+    .mob-menu
+      .mob-menu__inner
+        ul.mob-menu__list
+          li.mob-menu__item=__('menu_item_1')
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/')=__('menu_item_1_subitem_1')
+              li
+                a(href='/organizing-committee')=__('menu_item_1_subitem_2')
+              li
+                a(href='/programm-committee')=__('menu_item_1_subitem_3')
+              li
+                a(href='/key-speakers')=__('menu_item_1_subitem_4')
+              li
+                a(href='/major-dates')=__('menu_item_1_subitem_5')
+          li.mob-menu__item=__('menu_item_2')
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/registration')=__('menu_item_2_subitem_1')
+              li
+                a(href='/condition')=__('menu_item_2_subitem_2')
+          li.mob-menu__item
+            a(href='/programm')=__('menu_item_6')
+            
+          li.mob-menu__item=__('menu_item_3')
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/publication-rinc')=__('menu_item_3_subitem_1')
+              li
+                a(href='/publication-scopus')=__('menu_item_3_subitem_2')
+          li.mob-menu__item
+            a(href='/accommodation')=__('menu_item_4')
+          li.mob-menu__item
+            a(href='/contacts')=__('menu_item_5')
+        .mob-menu__contacts
+          .mob-menu__c-item
+            i.fa.fa-phone(aria-hidden='true')
+            a(href='tel:'+ globalPhone) #{globalPhone}
+          .mob-menu__c-item
+            i.fa.fa-envelope(aria-hidden='true')
+            a(href='mailto:'+ globalMail) #{globalMail}
+          .mob-menu__c-item
+            i.fas.fa-language
+            if locale === 'ru'
+              a(href='?lang=en') En
+            else
+              a(href='?lang=ru') Ru
+
+
+include header.pug

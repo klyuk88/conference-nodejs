@@ -1,0 +1,32 @@
+include head.pug 
+
+main
+  section.page-name
+    h1.page-name__title=__('speakers_title')
+    h3.page-name__conference=__('main_title_2')
+    .page-name__decoration-1
+    .page-name__decoration-2
+      .page-name__i-round-1
+      .page-name__i-round-2.
+        
+        
+      .page-name__i-round-3.
+        
+        
+  section.content
+    .content__inner
+      h2.title=__('speakers_title')     
+      .speakers-list
+        each item in pageData
+          .speaker-small
+            .speaker-small__portrait
+              .speaker-small__portrait--inner
+                img(src=adminUrl + item.attributes.Photo.data.attributes.url, alt=item.attributes.name)
+            h3.middle-title.speaker-small__title=item.attributes.name
+            p.speaker-small__theme.text
+              span.text-medium.text-black=__('speakers_title_2')
+              |  #{item.attributes.theme}
+            p.text.speaker-small__biography=item.attributes.about
+
+
+include footer.pug

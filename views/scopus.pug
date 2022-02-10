@@ -1,0 +1,43 @@
+include head.pug 
+
+main
+  section.page-name
+    h1.page-name__title=__('scopus_1')
+    h3.page-name__conference=__('main_title_2')
+    .page-name__decoration-1
+    .page-name__decoration-2
+      .page-name__i-round-1
+      .page-name__i-round-2.
+        
+        
+      .page-name__i-round-3.
+        
+        
+  section.content
+    .content__inner
+      .text-block.margin-v-md-45
+        h2.title=__('scopus_1')
+        p.text!=pageData.under_title
+        p.text.text-medium=__('scopus_2') 
+          span.text-blue.text-semibold=pageData.price + ' ₽'
+        p.text
+          span.note-star *
+          | #{__('scopus_3')}
+        p.text.text-medium=__('scopus_4')
+        p.text.text-medium=__('scopus_5')
+        .btn-block
+          a.blue-link(href='/send-materials')=__('scopus_5')
+        p.text.margin-v-15=__('scopus_6')
+        p.text.margin-v-15=__('scopus_7')
+        .btn-block
+          a.download-link(href=template, download)=__('scopus_8')
+
+            svg(width='63', height='16', viewBox='0 0 63 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM62 7L1 7V9L62 9V7Z', fill='#0C44AC')
+      .text-block.margin-v-md-45
+        p.text.text-medium=__('scopus_9')
+        .btn-group.btn-block
+          a.outer-link(href=pageData.aerospace_link) Aerospace Systems
+          a.outer-link(href=pageData.mechanics_link) Mechanics of Composite Materials
+
+include footer.pug

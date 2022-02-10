@@ -1,0 +1,51 @@
+include head.pug
+h3.h-conference=__('main_title_2')
+section.hero
+  img.h-plane(src='/assets/img/4561.png', alt)
+  .hero__content
+    .h-blue-round-1
+      .h-blue-round-1__inner.
+        
+        
+    .h-blue-round-2
+      .h-blue-round-2__inner.
+        
+        
+    .hero__content--inner
+      h1.hero__title=homeData.title
+      h2.hero__subtitle=homeData.subtitle
+      .hero__date
+        p=homeData.dates
+      .hero__institute
+        p.hero__institute-fn=__('main_mai_title')
+        p.hero__institute-sn=__('main_mai_subtitle')
+      .hero__detail
+        a(href='#')=__('main_btn')
+      .hero__next-screen
+        a(href='#main-page-content')
+          img(src='/assets/img/icons/next-screen.png', alt)
+main#main-page-content
+  section.content
+    .content__inner
+      .text-block
+        h2.big-title=__('Main_title')
+        p.text!=homeData.information
+      .text-block
+        h2.title=__('main_format_title')
+        p.text!=homeData.formats
+      .text-block
+        h2.middle-title=__('main_list_title')
+        ul.list
+          li=__('main_list_item_1')
+          li=__('main_list_item_2')
+          li=__('main_list_item_3')
+          li=__('main_list_item_4')
+          li=__('main_list_item_5')
+          li=__('main_list_item_6')
+  .page-decoration-1.index-page
+    .page-decoration-1__i-round-1
+      .page-decoration-1__i-round-2
+        .page-decoration-1__i-round-3
+
+
+include footer.pug

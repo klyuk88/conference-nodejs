@@ -1,0 +1,33 @@
+footer.footer
+  .footer__inner
+    nav.footer__nav
+      ul.f-menu
+        li
+          a(href='/')=__('menu_item_1')
+        li
+          a(href='/registration')=__('menu_item_2')
+        li
+          a(href='/programm')=__('menu_item_6')
+        li
+          a(href='/publication-scopus')=__('menu_item_3')
+        li
+          a(href='/accommodation')=__('menu_item_4')
+    .footer__contacts-block
+      .footer__contacts
+        h3.footer__title=__('menu_item_5')
+        .footer__c-item
+          i.fa.fa-phone(aria-hidden='true')
+          a(href='tel:'+ globalPhone) #{globalPhone}
+        .footer__c-item
+          i.fa.fa-envelope(aria-hidden='true')
+          a(href='mailto:' + globalMail) #{globalMail}
+      .footer__logos-block
+        .logotypes
+          a.logotypes__item(href='/')
+            img(src='/assets/img/logotypes/sverhzvuk.png', alt)
+          a.logotypes__item(href='/')
+            img(src='/assets/img/logotypes/mai.png', alt)
+          a.logotypes__item(href='/')
+            img(src='/assets/img/logotypes/plane.png', alt)
+script(src='/assets/js/easySelect.js')
+script(src='/assets/js/main.js')

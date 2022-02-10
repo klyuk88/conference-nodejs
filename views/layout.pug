@@ -1,0 +1,69 @@
+doctype html
+html(lang='ru_RU')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='Краткое описание страницы')
+    title=metaTitle
+    link(rel='shortcut icon', href='/assets/img/favicon.png', type='image/png')
+    link(rel='stylesheet', href='/assets/css/main.css')
+    link(rel='stylesheet', href='/assets/css/font-awesome.min.css')
+  body
+    .mob-menu
+      .mob-menu__inner
+        ul.mob-menu__list
+          li.mob-menu__item
+            | О конференции
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/') Общая информация
+              li
+                a(href='/organizing-committee') Организационный и технический комитеты
+              li
+                a(href='/programm-committee') Программный комитет
+              li
+                a(href='/key-speakers') Ключевые спикеры
+              li
+                a(href='/major-dates') Важные даты
+          li.mob-menu__item
+            | Регистрация
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/registration') Регистрация и предоставление материалов
+              li
+                a(href='/condition') Условия участия
+          li.mob-menu__item
+            a(href='#') Программа
+          li.mob-menu__item
+            | Публикация
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129', xlink='http://www.w3.org/1999/xlink', enable-background='new 0 0 129 129')
+              g
+                path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+            ul.mob-sub-menu
+              li
+                a(href='/publication-rinc') Публикация РИНЦ
+              li
+                a(href='/publication-scopus') Публикация Scopus
+          li.mob-menu__item
+            a(href='/accommodation') Размещение
+          li.mob-menu__item
+            a(href='/contacts') Контакты
+        .mob-menu__contacts
+          .mob-menu__c-item
+            i.fa.fa-phone(aria-hidden='true')
+            a(href='tel:+79099322602') +7 909 932 26 02
+          .mob-menu__c-item
+            i.fa.fa-envelope(aria-hidden='true')
+            a(href='mailto:hstd-conference@mail.ru') hstd-conference@mail.ru
+
+
+include header.pug

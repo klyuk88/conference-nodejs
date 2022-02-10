@@ -1,0 +1,47 @@
+include head.pug
+main
+  section.page-name
+    h1.page-name__title=__('contacts_1')
+    h3.page-name__conference=__('main_title_2')
+    .page-name__decoration-1
+    .page-name__decoration-2
+      .page-name__i-round-1
+      .page-name__i-round-2.
+        
+        
+      .page-name__i-round-3.
+        
+        
+  section.content.content-contacts-page
+    .content__inner
+      h2.title=__('contacts_2')
+      .contacts-block.text-block
+        .contacts-block__item
+          p.contacts-block__label.text=__('contacts_3')
+          a.contacts-link(href='mailto' + pageData.email)
+            i.fa.fa-envelope(aria-hidden='true')
+            | #{pageData.email}
+
+        .contacts-block__item
+          p.contacts-block__label.text=__('contacts_4')
+            br
+            span.text-medium=__('contacts_5')
+          a.contacts-link(href='tel:' + pageData.phone)
+            i.fa.fa-phone(aria-hidden='true')
+            | #{pageData.phone}
+
+  .page-decoration-1.contacts-page
+    .page-decoration-1__i-round-1
+      .page-decoration-1__i-round-2
+        .page-decoration-1__i-round-3.
+          
+          
+  .page-decoration-2.contacts-page
+    .page-decoration-2__i-subround-1
+      .page-decoration-2__i-subround-2
+    .page-decoration-2__i-round-1
+      .page-decoration-2__i-round-2
+        .page-decoration-2__i-round-3.
+          
+          
+include footer.pug

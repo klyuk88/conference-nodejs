@@ -1,0 +1,106 @@
+include head.pug 
+
+main
+  section.page-name
+    h1.page-name__title=__('cond_title')
+    h3.page-name__conference=__('main_title_2')
+    .page-name__decoration-1
+    .page-name__decoration-2
+      .page-name__i-round-1
+      .page-name__i-round-2.
+        
+        
+      .page-name__i-round-3.
+        
+        
+  section.content
+    .content__inner
+      .text-block.conditions-t-block
+        p.text.text-medium.text-black=__('cond_pre_table_text')
+        table.table
+          thead
+            tr
+              th=__('cond_table_header_1')
+              th=__('cond_table_header_2')
+          tbody
+            tr
+              td.cell-category=__('cond_table_tr_1')
+              td.cell-price=pageData.sng_price
+            tr
+              td.cell-category=__('cond_table_tr_2')
+              td.cell-price=pageData.mai_price
+            tr
+              td.cell-category=__('cond_table_tr_3')
+              td.cell-price=pageData.forigner_price
+        p.table-comment
+          span.note-star=__('cond_after_table_text')
+        .pay-links
+          a.pay-links__link.receipt-link(download, href=registrationCheck)=__('cond_register_check')
+          a.pay-links__link.online-pay-link(href=pageData.registration_check_link)=__('cond_register_link')
+        p.text.text-medium.text-black=__('cond_register_contract_text')
+        .btn-block
+          a.download-link(href=registrationContract, download)=__('cond_register_contract')
+
+            svg(width='63', height='16', viewBox='0 0 63 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM62 7L1 7V9L62 9V7Z', fill='#0C44AC')
+        p.text.text-black=__('cond_register_contract_text_2')
+        .ins-mail-block
+          a.contacts-link.margin-top-30(href='mailto:hstd-conference@mail.ru')
+            i.fa.fa-envelope(aria-hidden='true')
+            | hstd-conference@mail.ru
+
+        p.text.text-medium.text-black=__('cond_leave_text_1')
+        p.text.text-black=__('cond_leave_text_2')
+      .text-block
+        h2.title=__('cond_leave_title')
+        p.text.text-black=__('cond_leave_pay_text')
+          span.text-blue=__('cond_leave_pay_text_1')
+        p.text.text-black.text-medium=__('cond_leave_pay_text_2')
+        table.table
+          thead
+            tr
+              th=__('cond_leave_teble_title_1')
+              th=__('cond_leave_teble_title_2')
+          tbody
+            tr
+              td.cell-category.cell-ap-view
+                p.text-medium=__('cond_leave_teble_tr_1')
+                p=__('cond_leave_teble_tr_1_1')
+              td.cell-price 7000 ₽
+            tr
+              td.cell-category.cell-ap-view
+                p.text-medium=__('cond_leave_teble_tr_2')
+                p=__('cond_leave_teble_tr_2_1')
+              td.cell-price 12 500 ₽
+        p.table-comment=__('cond_leave_after_table')
+        p.text.text-black=__('cond_leave_after_table_1')
+          a.inner-link(href='mailto:hstd-conference@mail.ru')
+            i.fa.fa-envelope(aria-hidden='true')
+            |  hstd-conference@mail.ru
+          | #{__('cond_leave_after_table_2')}
+
+        .pay-links
+          a.pay-links__link.receipt-link(download, href=liveCheck)=__('cond_1')
+          a.pay-links__link.online-pay-link(href=live_check_link)=__('cond_2')
+        p.text.text-black.text-medium=__('cond_3')
+        .btn-block
+          a.download-link(href=liveContract, download)=__('cond_4')
+
+            svg(width='63', height='16', viewBox='0 0 63 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM62 7L1 7V9L62 9V7Z', fill='#0C44AC')
+      .text-block
+        h2.title=__('cond_5')
+        p.text.text-black=__('cond_6')
+          span.text-blue=__('cond_7')
+        p.text.text-black.text-medium=__('cond_8')
+          span.text-semibold.text-blue=pageData.publication_price
+        .pay-links.margin-bottom-35
+          a.pay-links__link.online-pay-link(href=pageData.publication_link)=__('cond_register_link')
+        p.text.text-black.text-medium=__('cond_register_contract_text')
+        .btn-block
+          a.download-link(href=publicationContract, download)=__('cond_9')
+
+            svg(width='63', height='16', viewBox='0 0 63 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM62 7L1 7V9L62 9V7Z', fill='#0C44AC')
+
+include footer.pug

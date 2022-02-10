@@ -10,7 +10,7 @@ router.get('/', async function(req, res, next) {
     if (response.ok) {
       const resData = await response.json()
       pageData = resData.data.attributes
-      const templateFile = process.env.ADMIN_URL + pageData.template.data.attributes.ADMIN_URL
+      const templateFile = pageData.template.data ? process.env.ADMIN_URL + pageData.template.data.attributes.url : '#'
       res.render('registration', {
         metaTitle: 'Регистрация',
         pageData,

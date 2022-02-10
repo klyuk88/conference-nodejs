@@ -9,11 +9,11 @@ router.get('/', function(req, res, next) {
   .then(response => response.json())
   .then(body => {
     pageData = body.data.attributes
-    const registrationCheck = process.env.ADMIN_URL + pageData.registration_check.data.attributes.url
-    const registrationContract = process.env.ADMIN_URL + pageData.registration_contract.data.attributes.url
-    const liveContract = process.env.ADMIN_URL + pageData.live_contract.data.attributes.url
-    const liveCheck = process.env.ADMIN_URL + pageData.live_check.data.attributes.url
-    const publicationContract = process.env.ADMIN_URL + pageData.publication_contract.data.attributes.url
+    const registrationCheck = pageData.registration_check.data ? process.env.ADMIN_URL + pageData.registration_check.data.attributes.url : '#'
+    const registrationContract = pageData.registration_contract.data ? process.env.ADMIN_URL + pageData.registration_contract.data.attributes.url : '#'
+    const liveContract = pageData.live_contract.data ? process.env.ADMIN_URL + pageData.live_contract.data.attributes.url : '#'
+    const liveCheck = pageData.live_check.data ? process.env.ADMIN_URL + pageData.live_check.data.attributes.url : '#'
+    const publicationContract = pageData.publication_contract.data ? process.env.ADMIN_URL + pageData.publication_contract.data.attributes.url : '#'
     res.render('conditions', {
       metaTitle: 'Условия участия',
       pageData,

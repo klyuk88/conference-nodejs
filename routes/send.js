@@ -28,6 +28,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxCount: 1}]), async(req, res, next) => {
+    console.log(req.files);
 
     const emailPost = {
         data: {
@@ -44,8 +45,8 @@ router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxC
           participation_form: req.body['Форма участия'] || 'Данные не соответсвуют типу формы',
           scopus_publication: req.body['Публикация Scopus'] || 'Данные не соответсвуют типу формы',
           request_number: req.body['Номер заявки'] || 'Данные не соответсвуют типу формы',
-          file: `${req.protocol}://${req.hostname}/${req.files['file'][0].path}`,
-          file2: req.files['file2'] ? `${req.protocol}://${req.hostname}/${req.files['file2'][0].path}` : null
+          file: `${req.protocol}://${req.hostname}/uploads/${req.files['file'][0].filename}`,
+          file2: req.files['file2'] ? `${req.protocol}://${req.hostname}/uploads/${req.files['file2'][0].filename}` : null
         }
       }
 

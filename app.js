@@ -29,6 +29,7 @@ import contacts from './routes/contacts.js'
 import accom from './routes/accom.js'
 import sendMail from './routes/send.js'
 import programm from './routes/programm.js'
+import downLoad from './routes/downLoad.js'
 
 
 const app = express();
@@ -83,7 +84,7 @@ app.use('/accommodation', accom)
 app.use('/programm', programm)
 
 app.use('/tech/send-mail', sendMail)
-
+app.use('/download', downLoad)
 
 
 //Handling 404

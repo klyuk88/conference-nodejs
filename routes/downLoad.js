@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { response } from 'express'
 import fetch from 'node-fetch'
 import excelJS from 'exceljs'
 
@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
         }
         
     } catch (error) {
-        console.log(error);
+        res.send(error)
     }   
     
 })

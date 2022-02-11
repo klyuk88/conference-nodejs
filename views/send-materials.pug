@@ -3,8 +3,8 @@ include head.pug
 
 main
   section.page-name
-    h1.page-name__title Подача материалов
-    h3.page-name__conference Конференция
+    h1.page-name__title=__('send_mat_1')
+    h3.page-name__conference=__('main_title_2')
     .page-name__decoration-1
     .page-name__decoration-2
       .page-name__i-round-1
@@ -17,49 +17,49 @@ main
   section.content.section-with-form
     .content__inner
       .text-block.margin-bottom-45
-        h2.title Форма подачи материалов
+        h2.title=__('send_mat_2')
         p.text.margin-v-15
           span.note-star *
-          | Чтобы подать материал, заполните форму
+          | #{__('send_mat_3')}
       .form-container
         form.form.f-send-materials(action='/tech/send-mail', method="post" enctype='multipart/form-data')
           input(type="hidden", name="subject" value="Подача материалов")
           .input-o-w.fio-wrap
             label(for='surname')
-              | Фамилия
+              | #{__('send_req_4')}
               span.note-star *
             .input-i-w
-              input.input#surname(type='text', name='Фамилия', required, placeholder='Фамилия')
+              input.input#surname(type='text', name='Фамилия', required, placeholder=__('send_req_4'))
           .input-o-w.fio-wrap
             label(for='name')
-              | Имя
+              | #{__('send_req_5')}
               span.note-star *
             .input-i-w
-              input.input#name(type='text', name='Имя', required, placeholder='Имя')
+              input.input#name(type='text', name='Имя', required, placeholder=__('send_req_5'))
           .input-o-w.fio-wrap
-            label(for='patronymic') Отчество
+            label(for='patronymic')=__('send_req_6')
             .input-i-w
-              input.input#patronymic(type='text', name='Отчество', placeholder='Отчество')
+              input.input#patronymic(type='text', name='Отчество', placeholder=__('send_req_6'))
           .input-o-w
             label(for='organization')
-              | Организация
+              | #{__('send_req_7')}
               span.note-star *
             .input-i-w
-              input.input#organization(type='text', name='Организация', placeholder='Организация', required)
+              input.input#organization(type='text', name='Организация', placeholder=__('send_req_7'), required)
           .input-o-w
             label(for='email')
-              | Электронная почта
+              | #{__('send_req_8')}
               span.note-star *
             .input-i-w
-              input.input#email(type='email', name='Email', placeholder='Электронная почта', required)
+              input.input#email(type='email', name='Email', placeholder=__('send_req_8'), required)
           .input-o-w
-            label(for='app-num') Номер заявки
+            label(for='app-num')=__('send_mat_4')
             .input-i-w
-              input.input#app-num(type='text', name='Номер заявки', placeholder='Номер заявки')
+              input.input#app-num(type='text', name='Номер заявки', placeholder=__('send_mat_4'))
           .input-o-w
             label(for='app-file')
               span.note-star *
-              | Прикрепите файл (WORD)
+              | #{__('send_mat_5')}
             .input-i-w
               .input.file-input-name
                 .add-file
@@ -71,14 +71,12 @@ main
               input.easyCheckbox__hidden-checkbox#approve(type='checkbox', name='Согласие с обработкой данных')
               .easyCheckbox__visible-checkbox.easyCheckbox__square
               p.easyCheckbox__text
-                | Отправляя форму я соглашаюсь с 
-                a(href='#') политикой безопасности
-                |  и соглашаюсь на 
-                a(href='#') обработку персональных данных
+                | #{__('send_req_26')} 
+                a(href='#')=__('send_req_27')
           .sendform-btn--block
             button.sendform-btn.
               
-              Отправить
+              #{__('send_req_28')}
               
     .form-decoration
       img(src='/assets/img/4561.png', alt)

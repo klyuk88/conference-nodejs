@@ -1,8 +1,8 @@
 include head.pug
 main
   section.page-name
-    h1.page-name__title Подача заявок
-    h3.page-name__conference Конференция
+    h1.page-name__title=__('send_req_1')
+    h3.page-name__conference=__('main_title_2')
     .page-name__decoration-1
     .page-name__decoration-2
       .page-name__i-round-1
@@ -10,96 +10,87 @@ main
         
         
       .page-name__i-round-3.
-
-
-  //- form(action="/tech/send-mail", method="post" enctype="multipart/form-data")
-  //-   input(type="text", name='Имя' placeholder='Name')
-  //-   input(type="tel", name='Телефон' placeholder='Phone')
-  //-   input(type="file", name="file")
-  //-   input(type="file", name="file2")
-  //-   button(type="submit") Отправить
-        
         
   section.content.section-with-form
     .content__inner
       .text-block.margin-bottom-45
-        h2.title Форма подачи заявок
+        h2.title=__('send_req_2')
         p.text.margin-v-15
           span.note-star *
-          | Чтобы принять участие, заполните форму
+          | #{__('send_req_3')}
       .form-container
         form.form.f-send-materials(action='/tech/send-mail', method="post" enctype="multipart/form-data")
           input(type="hidden", name="subject" value="Подача заявок")
           .input-o-w.fio-wrap
             label(for='surname')
-              | Фамилия
+              | #{__('send_req_4')}
               span.note-star *
             .input-i-w
-              input.input#surname(type='text', name='Фамилия', required, placeholder='Фамилия')
+              input.input#surname(type='text', name='Фамилия', required, placeholder=__('send_req_4'))
           .input-o-w.fio-wrap
             label(for='name')
-              | Имя
+              | #{__('send_req_5')}
               span.note-star *
             .input-i-w
-              input.input#name(type='text', name='Имя', required, placeholder='Имя')
+              input.input#name(type='text', name='Имя', required, placeholder=__('send_req_5'))
           .input-o-w.fio-wrap
-            label(for='patronymic') Отчество
+            label(for='patronymic') #{__('send_req_6')}
             .input-i-w
-              input.input#patronymic(type='text', name='Отчество', placeholder='Отчество')
+              input.input#patronymic(type='text', name='Отчество', placeholder=__('send_req_6'))
           .input-o-w
             label(for='organization')
-              | Организация
+              | #{__('send_req_7')}
               span.note-star *
             .input-i-w
-              input.input#organization(type='text', name='Организация', placeholder='Организация', required)
+              input.input#organization(type='text', name='Организация', placeholder=__('send_req_7'), required)
           .input-o-w
             label(for='email')
-              | Электронная почта
+              | #{__('send_req_8')}
               span.note-star *
             .input-i-w
-              input.input#email(type='email', name='Email', placeholder='Электронная почта', required)
+              input.input#email(type='email', name='Email', placeholder=__('send_req_8'), required)
           .input-o-w
             label(for='post')
-              | Должность
+              | #{__('send_req_9')}
               span.note-star *
             .input-i-w
-              input.input#post(type='text', name='Должность', placeholder='Должность', required)
+              input.input#post(type='text', name='Должность', placeholder=__('send_req_9'), required)
           .input-o-w
             label(for='work-name')
-              | Название работы
+              | #{__('send_req_10')}
               span.note-star *
             .input-i-w
-              input.input#work-name(type='text', name='Название работы', placeholder='Название работы', required)
+              input.input#work-name(type='text', name=__('send_req_10'), placeholder='Название работы', required)
           .input-o-w
             label(for='annotation')
-              | Аннотация
+              | #{__('send_req_11')}
               span.note-star *
             .input-i-w
-              input.input#annotation(type='text', name='Аннотация', placeholder='Аннотация')
+              input.input#annotation(type='text', name='Аннотация', placeholder=__('send_req_11'))
           .input-o-w
             label(for='section-name-1')
-              | Секция
+              | #{__('send_req_12')}
               span.note-star *
             .input-i-w
               .easySelect
                 .easySelect__vis-value
                   .easySelect__cur-value(data-value).
-                    Секция
+                    #{__('send_req_12')}
                   input.easySelect__hide-input(type='text', name='Секция')
                   .easySelect__arrow
                     svg(width='21', height='13', viewBox='0 0 21 13', fill='none', xmlns='http://www.w3.org/2000/svg')
                       path(d='M1 1L11 12L20.5 1', stroke='#0C44AC')
                 ul.easySelect__options-list(data-state='rolled', data-hide_checked='false')
-                  li.easySelect__option(data-value='Методы снижения шума') Методы снижения шума и вредных выбросов при проектировании высокоскоростных летательных аппаратов
-                  li.easySelect__option(data-value='Общие вопросы аэродинамики') Общие вопросы аэродинамики и проектирования летательных аппаратов нового поколения
-                  li.easySelect__option(data-value='Методы проектирования') Методы проектирования силовых установок
-                  li.easySelect__option(data-value='Конструкция, прочность, новые материалы') Конструкция, прочность, новые материалы
-                  li.easySelect__option(data-value='Искусственный интеллект') Искусственный интеллект, интеграция авионики
-                  li.easySelect__option(data-value='Сертификация воздушных судов') Сертификация воздушных судов нового поколения
+                  li.easySelect__option(data-value='Методы снижения шума')=__('send_req_13')
+                  li.easySelect__option(data-value='Общие вопросы аэродинамики')=__('send_req_14')
+                  li.easySelect__option(data-value='Методы проектирования')=__('send_req_15')
+                  li.easySelect__option(data-value='Конструкция, прочность, новые материалы')=__('send_req_16')
+                  li.easySelect__option(data-value='Искусственный интеллект')=__('send_req_17')
+                  li.easySelect__option(data-value='Сертификация воздушных судов')=__('send_req_18')
           .input-o-w
             label(for='expert-opinion')
               span.note-star *
-              | Экспертное заключение (PDF)
+              | #{__('send_req_19')}
             .input-i-w
               .input.file-input-name
                 .add-file
@@ -109,7 +100,7 @@ main
           .input-o-w
             label(for='theses')
               span.note-star *
-              | Тезисы доклада (WORD)
+              | #{__('send_req_20')}
             .input-i-w
               .input.file-input-name
                 .add-file
@@ -119,44 +110,42 @@ main
           .input-o-w
             label(for='f-participation')
               span.note-star *
-              | Форма участия
+              | #{__('send_req_21')}
             .input-i-w
               .radio-wrap
                 label.easyRadio(for='f-participation-rb-1')
                   input#f-participation-rb-1.easyRadio__hidden-radio(type='radio', name='Форма участия', value='Очно', checked)
                   .easyRadio__visible-radio.easyRadio__round
-                  p.easyRadio__text Очно
+                  p.easyRadio__text=__('send_req_22')
                 label.easyRadio(for='f-participation-rb-2')
                   input#f-participation-rb-2.easyRadio__hidden-radio(type='radio', name='Форма участия', value='Дистанционно')
                   .easyRadio__visible-radio.easyRadio__round
-                  p.easyRadio__text Дистанционно
+                  p.easyRadio__text=__('send_req_21')
           .input-o-w
             label(for='scopus-pub-1')
               span.note-star *
-              | Публикация Scopus
+              | #{__('send_req_23')}
             .input-i-w
               .radio-wrap
                 label.easyRadio(for='scopus-pub-1')
                   input#scopus-pub-1.easyRadio__hidden-radio(type='radio', name='Публикация Scopus', value='Да', checked)
                   .easyRadio__visible-radio.easyRadio__round
-                  p.easyRadio__text Да
+                  p.easyRadio__text=__('send_req_24')
                 label.easyRadio(for='scopus-pub-2')
                   input#scopus-pub-2.easyRadio__hidden-radio(type='radio', name='Публикация Scopus', value='Нет')
                   .easyRadio__visible-radio.easyRadio__round
-                  p.easyRadio__text Нет
+                  p.easyRadio__text=__('send_req_25')
           .approve-block
             label.easyCheckbox(for='approve')
               input.easyCheckbox__hidden-checkbox#approve(type='checkbox', name='Согласие с обработкой данных')
               .easyCheckbox__visible-checkbox.easyCheckbox__square
               p.easyCheckbox__text
-                | Отправляя форму я соглашаюсь с 
-                a(href='#') политикой безопасности
-                |  и соглашаюсь на 
-                a(href='#') обработку персональных данных
+                | #{__('send_req_26')}
+                a(href='#')=__('send_req_27')
           .sendform-btn--block
             button.sendform-btn.
               
-              Отправить
+             #{__('send_req_28')}
               
     .form-decoration
       img(src='/assets/img/4561.png', alt)

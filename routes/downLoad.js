@@ -49,13 +49,12 @@ router.get('/', async (req, res) => {
 
             // console.log(__dirname, __filename);
 
-            res.send('ok')
+            // res.send('ok')
             
             const filePath = '/emails.xlsx'
             const fileName = 'emails.xlsx'
-            
-
-            // res.download(filePath, fileName)
+        
+            res.download(filePath, fileName)
         }
         
     } catch (error) {

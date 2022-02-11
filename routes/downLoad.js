@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
 
             // res.send('ok')
             
-            const filePath = '/emails.xlsx'
+            const filePath = '/'
             const fileName = 'emails.xlsx'
         
             res.download(filePath, fileName)

@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
                 worksheet.addRow(item.attributes)
             });
 
-            await workbook.xlsx.writeFile('emails.xlsx');
+            await workbook.xlsx.writeFile('/public/files/emails.xlsx');
 
             // const __dirname = path.dirname(fileURLToPath(import.meta.url));
             // const __filename = fileURLToPath(import.meta.url);
@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
 
             // res.send('ok')
             
-            const filePath = '/'
+            const filePath = '/public/files/'
             const fileName = 'emails.xlsx'
         
             res.download(filePath, fileName)

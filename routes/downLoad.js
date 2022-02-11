@@ -1,4 +1,4 @@
-import express, { response } from 'express'
+import express from 'express'
 import fetch from 'node-fetch'
 import excelJS from 'exceljs'
 
@@ -16,6 +16,8 @@ router.get('/', async (req, res) => {
         if(emailsReq.ok) {
             const emailsRes = await emailsReq.json()
             const emailsData = emailsRes.data
+
+            res.send(emailsData)
 
             const workbook = new excelJS.Workbook();
             const worksheet = workbook.addWorksheet('Emails');
@@ -40,7 +42,7 @@ router.get('/', async (req, res) => {
             });
 
             await workbook.xlsx.writeFile('./public/files/emails.xlsx');
-            res.send('ok')
+            
             const filePath = './public/files/emails.xlsx'
             const fileName = 'emails.xlsx'
             

@@ -40,11 +40,12 @@ router.get('/', async (req, res) => {
             });
 
             await workbook.xlsx.writeFile('./public/files/emails.xlsx');
-
+            res.send('ok')
             const filePath = './public/files/emails.xlsx'
             const fileName = 'emails.xlsx'
+            
 
-            res.download(filePath, fileName)
+            // res.download(filePath, fileName)
         }
         
     } catch (error) {

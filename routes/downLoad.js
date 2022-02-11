@@ -17,8 +17,6 @@ router.get('/', async (req, res) => {
             const emailsRes = await emailsReq.json()
             const emailsData = emailsRes.data
 
-            res.send(emailsData)
-
             const workbook = new excelJS.Workbook();
             const worksheet = workbook.addWorksheet('Emails');
             worksheet.columns = [
@@ -42,6 +40,8 @@ router.get('/', async (req, res) => {
             });
 
             await workbook.xlsx.writeFile('./public/files/emails.xlsx');
+
+            res.send('ok')
             
             const filePath = './public/files/emails.xlsx'
             const fileName = 'emails.xlsx'

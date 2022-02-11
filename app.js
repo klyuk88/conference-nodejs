@@ -36,8 +36,11 @@ const app = express();
 
 app.use(cookieParser())
 
-const __dirname = path.dirname(fileURLToPath(
-  import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// console.log(__dirname, __filename);
+
+  
 const i18n = new I18n()
 
 app.use(i18n.init)

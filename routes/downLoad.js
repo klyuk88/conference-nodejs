@@ -2,6 +2,9 @@ import express from 'express'
 import fetch from 'node-fetch'
 import excelJS from 'exceljs'
 
+import {fileURLToPath} from 'url'
+import path from 'path'
+
 const router = express.Router()
 
 router.get('/', async (req, res) => {
@@ -39,11 +42,16 @@ router.get('/', async (req, res) => {
                 worksheet.addRow(item.attributes)
             });
 
-            await workbook.xlsx.writeFile('./public/files/emails.xlsx');
+            await workbook.xlsx.writeFile('emails.xlsx');
+
+            // const __dirname = path.dirname(fileURLToPath(import.meta.url));
+            // const __filename = fileURLToPath(import.meta.url);
+
+            // console.log(__dirname, __filename);
 
             res.send('ok')
             
-            const filePath = './public/files/emails.xlsx'
+            const filePath = '/emails.xlsx'
             const fileName = 'emails.xlsx'
             
 

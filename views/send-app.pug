@@ -60,7 +60,7 @@ main
               | #{__('send_req_10')}
               span.note-star *
             .input-i-w
-              input.input#work-name(type='text', name=__('send_req_10'), placeholder='Название работы', required)
+              input.input#work-name(type='text', name=__('send_req_10'), placeholder=__('send_req_10'), required)
           .input-o-w
             label(for='annotation')
               | #{__('send_req_11')}
@@ -81,16 +81,18 @@ main
                     svg(width='21', height='13', viewBox='0 0 21 13', fill='none', xmlns='http://www.w3.org/2000/svg')
                       path(d='M1 1L11 12L20.5 1', stroke='#0C44AC')
                 ul.easySelect__options-list(data-state='rolled', data-hide_checked='false')
-                  li.easySelect__option(data-value='Методы снижения шума')=__('send_req_13')
-                  li.easySelect__option(data-value='Общие вопросы аэродинамики')=__('send_req_14')
-                  li.easySelect__option(data-value='Методы проектирования')=__('send_req_15')
-                  li.easySelect__option(data-value='Конструкция, прочность, новые материалы')=__('send_req_16')
-                  li.easySelect__option(data-value='Искусственный интеллект')=__('send_req_17')
-                  li.easySelect__option(data-value='Сертификация воздушных судов')=__('send_req_18')
+                  li.easySelect__option(data-value='Рынки')=__('send_req_13')
+                  li.easySelect__option(data-value='Модели функционирования')=__('send_req_14')
+                  li.easySelect__option(data-value='Проектные решения')=__('send_req_15')
+                  li.easySelect__option(data-value='Конструкция, прочность')=__('send_req_16')
+                  li.easySelect__option(data-value='Энергетические и силовые системы')=__('send_req_17')
+                  li.easySelect__option(data-value='Новые материалы')=__('send_req_18')
+                  li.easySelect__option(data-value='Беспилотный транспорт')=__('send_req_18_1')
+                  li.easySelect__option(data-value='Сертификация, эксплуатация')=__('send_req_18_2')
           .input-o-w
             label(for='expert-opinion')
               span.note-star *
-              | #{__('send_req_19')}
+              | #{__('send_req_19_0')}
             .input-i-w
               .input.file-input-name
                 .add-file
@@ -100,7 +102,7 @@ main
           .input-o-w
             label(for='theses')
               span.note-star *
-              | #{__('send_req_20')}
+              | #{__('send_req_19')}
             .input-i-w
               .input.file-input-name
                 .add-file
@@ -110,7 +112,7 @@ main
           .input-o-w
             label(for='f-participation')
               span.note-star *
-              | #{__('send_req_21')}
+              | #{__('send_req_20')}
             .input-i-w
               .radio-wrap
                 label.easyRadio(for='f-participation-rb-1')

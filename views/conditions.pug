@@ -47,7 +47,7 @@ main
         .ins-mail-block
           a.contacts-link.margin-top-30(href='mailto:hstd-conference@mail.ru')
             i.fa.fa-envelope(aria-hidden='true')
-            | hstd-conference@mail.ru
+            | #{globalMail}
 
         p.text.text-medium.text-black=__('cond_leave_text_1')
         p.text.text-black=__('cond_leave_text_2')
@@ -74,9 +74,9 @@ main
               td.cell-price 12 500 ₽
         p.table-comment=__('cond_leave_after_table')
         p.text.text-black=__('cond_leave_after_table_1')
-          a.inner-link(href='mailto:hstd-conference@mail.ru')
+          a.inner-link(href='mailto:hstd-conference@mai.ru')
             i.fa.fa-envelope(aria-hidden='true')
-            |  hstd-conference@mail.ru
+            |  #{globalMail}. 
           | #{__('cond_leave_after_table_2')}
 
         .pay-links

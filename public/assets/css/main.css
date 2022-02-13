@@ -3112,3 +3112,16 @@ main {
           .t-c-content .form-decoration {
             bottom: 0px; } }
     
+
+.text-wrap p{
+  line-height: 1.2;
+  font-variant: small-caps;
+  color: rgba(67, 67, 67, 0.79);
+  font-size: calc(11px + .7vw);
+  margin: 30px 0;
+  font-size: calc(11px + .7vw);
+}
+
+.text-wrap a {
+  color: #0206c8;
+}

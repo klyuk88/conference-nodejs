@@ -20,18 +20,15 @@ main
           .placement-block__img
             img(src='assets/img/icons/placement.png', alt)
           .placement-block__text-block
-            p.text.text-black=__('accom_2')
-            p.text=__('accom_3')
-        p.text=__('accom_4')
+            p.text.text-black=pageData.attributes.territory
+            p.text=pageData.attributes.territory_2
+        p.text=pageData.attributes.paragraph_1
       .placement-g
         .placement-g__img-block
-          img(src='/assets/img/hotel/1.jpg', alt)
+          img(src=image1, alt)
         .placement-g__img-block
-          img(src='/assets/img/hotel/2.jpg', alt)
+          img(src=image2, alt)
       .text-block.margin-top-45
-        p.text=__('accom_5')
-          a.text-blue.text-medium(href='/conditions')=__('accom_6')
-        p.text=__('accom_7')
-        p.text=__('accom_8')
-        p.text.margin-top-45.margin-top-md-30=__('accom_9')
+        .text-wrap!=paragraph
+        
 include footer.pug

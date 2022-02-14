@@ -53,9 +53,7 @@ main
         p.text.text-black=__('cond_leave_text_2')
       .text-block
         h2.title=__('cond_leave_title')
-        p.text.text-black=__('cond_leave_pay_text')
-          span.text-blue=__('cond_leave_pay_text_1')
-        p.text.text-black.text-medium=__('cond_leave_pay_text_2')
+        .text-cond!=beforeTableText
         table.table
           thead
             tr
@@ -66,19 +64,14 @@ main
               td.cell-category.cell-ap-view
                 p.text-medium=__('cond_leave_teble_tr_1')
                 p=__('cond_leave_teble_tr_1_1')
-              td.cell-price 7000 ₽
+              td.cell-price=pageData.room_price_1
             tr
               td.cell-category.cell-ap-view
                 p.text-medium=__('cond_leave_teble_tr_2')
                 p=__('cond_leave_teble_tr_2_1')
-              td.cell-price 12 500 ₽
+              td.cell-price=pageData.room_price_2
         p.table-comment=__('cond_leave_after_table')
-        p.text.text-black=__('cond_leave_after_table_1')
-          a.inner-link(href='mailto:hstd-conference@mai.ru')
-            i.fa.fa-envelope(aria-hidden='true')
-            |  #{globalMail}. 
-          | #{__('cond_leave_after_table_2')}
-
+        .text-cond!=afterTableText
         .pay-links
           a.pay-links__link.receipt-link(download, href=liveCheck)=__('cond_1')
           a.pay-links__link.online-pay-link(href=live_check_link)=__('cond_2')

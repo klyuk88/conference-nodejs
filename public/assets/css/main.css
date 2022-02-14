@@ -3113,7 +3113,7 @@ main {
             bottom: 0px; } }
     
 
-.text-wrap p{
+.text-wrap p, .text-cond{
   line-height: 1.2;
   font-variant: small-caps;
   color: rgba(67, 67, 67, 0.79);

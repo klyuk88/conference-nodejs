@@ -3,12 +3,11 @@
     "main_format_title": "Formats of participation in the conference",
     "main_list_title": "The conference will be organized in the following areas:",
 
-    "main_list_item_1": "Markets, requirements, concepts for the implementation of the rapid transport of the future;",
-    "main_list_item_2": "Models of functioning, modeling, software and hardware platforms for solving problems of high-speed transport;",
-    "main_list_item_3": "Design decisions, design implementation, weight analysis;",
-    "main_list_item_4": "Construction, durability, new materials",
-    "main_list_item_5": "Power and propulsion systems for rapid transit;",
-    "main_list_item_6": "New materials, production technologies, development prospects;",
+    "main_list_item_1": "Markets, requirements, concepts for the implementation of the high-speed transport of the future;",
+    "main_list_item_2": "Functioning models, modeling, software and hardware platforms for solving problems of high-speed transport;",
+    "main_list_item_3": "Design solutions, design implementation, weight analysis;",
+    "main_list_item_5": "Energy and power systems of high-speed transport;",
+    "main_list_item_6": "New materials, production technologies, future considerations;",
     "main_list_item_7": "Unmanned vehicles, artificial intelligence, predictive analytics;",
     "main_list_item_8": "Certification, operation, after-sales service.",
 
@@ -23,13 +22,13 @@
     "menu_item_1_subitem_4": "Key speakers",
     "menu_item_1_subitem_5": "Important Dates",
     "menu_item_2": "Registration",
-    "menu_item_2_subitem_1": "Subitem Registration and Submission",
-    "menu_item_2_subitem_2": "Conditions of Participation",
+    "menu_item_2_subitem_1": "Registration and Submission",
+    "menu_item_2_subitem_2": "The Terms of Participation",
     "menu_item_2_subitem_3": "Program",
     "menu_item_3": "Publish",
     "menu_item_3_subitem_1": "RSCI Publication",
     "menu_item_3_subitem_2": "Scopus Publication",
-    "menu_item_4": "Placement",
+    "menu_item_4": "Venue",
     "menu_item_5": "Contacts",
     "menu_item_6": "Programm",
 
@@ -45,9 +44,9 @@
 
     "dates_title": "Important Dates",
 
-    "register_title": "Register and submit content",
+    "register_title": "Register and submit abstract",
     "register_btn": "Fill online form",
-    "register_template_text": "Thesis template can be downloaded here",
+    "register_template_text": "Abstracts template can be downloaded here.",
     "register_download_template": "Download Template",
     "register_price_text": "Publication Cost ",
     "register_read_more": "read more",
@@ -66,7 +65,7 @@
     "cond_register_contract": "Sample of a standard contract and act for payment of the registration fee",
     "cond_register_contract_text_2": "The completed contract (with the amount and details of your organization) must be sent to:",
     "cond_leave_text_1": "Travel to the conference venue and accommodation are paid separately",
-    "cond_leave_text_2": "(meals are included in the price when booking a room at the OEC MAI 'Alushta')",
+    "cond_leave_text_2": "",
     "cond_leave_title": "Payment for accommodation",
     "cond_leave_pay_text": "Amount of payment for accommodation in the OEC MAI 'Alushta'",
     "cond_leave_pay_text_1": " includes accommodation for 5 days from August 29 to September 2 and three meals a day.",
@@ -85,9 +84,9 @@
     "cond_3": "If necessary, an agreement is drawn up and an act on the work performed",
     "cond_4": "Sample of a standard contract and act for paying for accommodation",
     "cond_5": "Publication payment",
-    "cond_6": "The registration fee for publication in the Springer Proceedings is due",
-    "cond_7": "only after notifying the Organizing Committee",
-    "cond_8": "Payment cost ",
+    "cond_6": "The registration fee for publication in the Proceedings of the Conference is paid",
+    "cond_7": " only after notification of the Organizing Committee",
+    "cond_8": "Payment cost: ",
     "cond_9": "Sample standard contract and act for payment of registration fee for publication",
 
     "programm_1": "Provisional conference schedule",
@@ -110,15 +109,15 @@
     "accom_9": "The travel time to the conference venue is no more than 10 minutes. Bookings should be made in advance, if possible.",
 
     "contacts_1": "Contacts",
-    "contacts_2": "For any questions, please contact:",
+    "contacts_2": "For any questions please contact:",
     "contacts_3": "E-mail of the Organizing Committee",
     "contacts_4": "Conference Technical Committee Chairman",
-    "contacts_5": "Maxim Viktorovich Shkurina",
+    "contacts_5": "Maxim Viktorovich Shkurin",
 
     "scopus_1": "SCOPUS Publication",
-    "scopus_2": "Publishing cost ",
-    "scopus_3": "The cost of publication is not included in the registration fee for participation in the conference and is paid separately. Payment for the article occurs only after the materials have been accepted for publication. The materials are subject to one-sided blind peer review.",
-    "scopus_4": "The intention to publish is indicated when filling out the application for participation in the conference. Publication in the issue is possible only for conference participants.",
+    "scopus_2": "Publishing cost: ",
+    "scopus_3": "The cost of publication is not included in the registration fee for participation in the conference and is paid separately. Payment for the papers is possible only after acceptance for publication. The papers are subject to one side blind review.",
+    "scopus_4": "The intention to publish is indicated when filling out the application for participation in the conference. Publication in the conference proceedings and journals is possible only for conference participants.",
     "scopus_5": "Submit material for publication",
     "scopus_6": "Participants must indicate the application number and attach the manuscript.",
     "scopus_7": "Detailed requirements and design template are in the file",
@@ -166,7 +165,8 @@
     "send_mat_3": "To submit a material, fill out the form",
     "send_mat_4": "Application number",
     "send_mat_5": "Attach file (WORD)",
-    "send_mat_6": "Request number"
+    "send_mat_6": "Request number",
+    "rub": "RUB"
 
 
 

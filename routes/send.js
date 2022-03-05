@@ -88,8 +88,8 @@ router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxC
     }
 
     const mailData = {
-        from: 'klyukovskiy@yandex.ru',
-        to: 'klyukovskiy@yandex.ru',
+        from: 'hstd-conference@mai.ru',
+        to: 'hstd-conference@mai.ru',
         subject: subject,
         text: textBody,
         html: htmlBody,
@@ -103,19 +103,3 @@ router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxC
     })
 })
 export default router
-
-
-
-    //   fetch(`${process.env.ADMIN_URL}/api/emails/`, {
-    //     method: 'post',
-    //     headers: {
-    //       Authorization: "Bearer 72339e56cd7822b7acac763618fede97370e865269fb2a963f4f1ba452230f5fdf92993fc82a2452394d71a77bd7ca1a46b5962fd17be77aaf89ccbcc99f04972898af0ebb084f7d71196dfbaab1bdc03d4a131579c4007d99628c66e83012c97219deb9d3ff5771966a6a83f45f28091eb9e73884b0e6771a3d06daa432fe8d",
-    //       'Content-Type': 'application/json'
-    //     },
-        
-    //     body: JSON.stringify(emailPost)
-    //   })
-    //   .then((resp) => resp.json())
-    //   .then((resp) => {
-    //     console.log(resp);
-    //   })

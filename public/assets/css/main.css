@@ -3125,3 +3125,16 @@ main {
 .text-wrap a {
   color: #0206c8;
 }
+
+
+.speakers-empty-wrap {
+  padding: 100px 0;
+}
+
+.speakers-empty-wrap h3 {
+  font-size: 30px;
+}
+
+.text.attention {
+  color: #ED0101;
+}

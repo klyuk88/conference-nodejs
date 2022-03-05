@@ -37,6 +37,7 @@ main
         .pay-links
           a.pay-links__link.receipt-link(download, href=registrationCheck)=__('cond_register_check')
           a.pay-links__link.online-pay-link(href=pageData.registration_check_link)=__('cond_register_link')
+        p.text.attention!=pageData.attantion_text
         p.text.text-medium.text-black=__('cond_register_contract_text')
         .btn-block
           a.download-link(href=registrationContract, download)=__('cond_register_contract')
@@ -75,6 +76,7 @@ main
         .pay-links
           a.pay-links__link.receipt-link(download, href=liveCheck)=__('cond_1')
           a.pay-links__link.online-pay-link(href=live_check_link)=__('cond_2')
+        p.text.attention!=pageData.attantion_text_3
         p.text.text-black.text-medium=__('cond_3')
         .btn-block
           a.download-link(href=liveContract, download)=__('cond_4')
@@ -90,6 +92,7 @@ main
         .pay-links.margin-bottom-35
           a.pay-links__link.online-pay-link(href=pageData.publication_link)=__('cond_register_link')
         p.text.text-black.text-medium=__('cond_register_contract_text')
+        p.text.attention!=pageData.attantion_text_2
         .btn-block
           a.download-link(href=publicationContract, download)=__('cond_9')
 

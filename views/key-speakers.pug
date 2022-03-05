@@ -15,18 +15,22 @@ main
         
   section.content
     .content__inner
-      h2.title=__('speakers_title')     
-      .speakers-list
-        each item in pageData
-          .speaker-small
-            .speaker-small__portrait
-              .speaker-small__portrait--inner
-                img(src=adminUrl + item.attributes.Photo.data.attributes.url, alt=item.attributes.name)
-            h3.middle-title.speaker-small__title=item.attributes.name
-            p.speaker-small__theme.text
-              span.text-medium.text-black=__('speakers_title_2')
-              |  #{item.attributes.theme}
-            p.text.speaker-small__biography=item.attributes.about
+      h2.title=__('speakers_title')
+      if pageData.length > 0
+        .speakers-list
+          each item in pageData
+            .speaker-small
+              .speaker-small__portrait
+                .speaker-small__portrait--inner
+                  img(src=adminUrl + item.attributes.Photo.data.attributes.url, alt=item.attributes.name)
+              h3.middle-title.speaker-small__title=item.attributes.name
+              p.speaker-small__theme.text
+                span.text-medium.text-black=__('speakers_title_2')
+                |  #{item.attributes.theme}
+              p.text.speaker-small__biography=item.attributes.about
+      else
+        .speakers-empty-wrap
+          h3=__('speakers_1')
 
 
 include footer.pug

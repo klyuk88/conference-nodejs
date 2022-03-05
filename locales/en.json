@@ -75,7 +75,7 @@
     "cond_leave_teble_tr_1": "A place in a double/triple one-room suite with partial amenities",
     "cond_leave_teble_tr_1_1": "(the room has a sink, toilet and shower - on the floor)",
     "cond_leave_teble_tr_2": "Place in superior double room",
-    "cond_leave_teble_tr_2_1": "(the room has a double bed, sofa bed, shower, toilet and refrigerator) for all categories of participants",
+    "cond_leave_teble_tr_2_1": "(the room has a double bed, sofa bed, shower, toilet and air conditioner) for all categories of participants",
     "cond_leave_after_table": "Superior rooms are limited",
     "cond_leave_after_table_1": "Please check availability at the address before paying ",
     "cond_leave_after_table_2": "Payment is due after confirmation from the Organizing Committee.",
@@ -131,7 +131,7 @@
     "send_req_3": "To participate, fill out the form",
     "send_req_4": "Last name",
     "send_req_5": "Name",
-    "send_req_6": "Patronymic",
+    "send_req_6": "Middle name",
     "send_req_7": "Organization",
     "send_req_8": "Email",
     "send_req_9": "Position",
@@ -166,7 +166,8 @@
     "send_mat_4": "Application number",
     "send_mat_5": "Attach file (WORD)",
     "send_mat_6": "Request number",
-    "rub": "RUB"
+    "rub": "RUB",
+    "speakers_1": "The material is supplemented"
 
 
 

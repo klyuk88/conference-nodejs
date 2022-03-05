@@ -89,16 +89,17 @@ main
                   li.easySelect__option(data-value='Новые материалы')=__('send_req_18')
                   li.easySelect__option(data-value='Беспилотный транспорт')=__('send_req_18_1')
                   li.easySelect__option(data-value='Сертификация, эксплуатация')=__('send_req_18_2')
-          .input-o-w
-            label(for='expert-opinion')
-              span.note-star *
-              | #{__('send_req_19_0')}
-            .input-i-w
-              .input.file-input-name
-                .add-file
-                  div
-                  div
-                input.file-input#expert-opinion(type='file', name='file', accept='.pdf')
+          if locale === 'ru'
+            .input-o-w
+              label(for='expert-opinion')
+                span.note-star *
+                | #{__('send_req_19_0')}
+              .input-i-w
+                .input.file-input-name
+                  .add-file
+                    div
+                    div
+                  input.file-input#expert-opinion(type='file', name='file', accept='.pdf')
           .input-o-w
             label(for='theses')
               span.note-star *

@@ -10,10 +10,10 @@ const router = express.Router()
 
 const transporter = nodemailer.createTransport({
     port: 465, // true for 465, false for other ports
-    host: "smtp.yandex.ru",
+    host: "smtp.mail.ru",
     auth: {
-      user: 'klyukovskiy',
-      pass: 'dmb02072010',
+      user: 'conference-mai@mail.ru',
+      pass: 'EZxzELUWXqpUEnbGcHA1',
     },
     secure: true,
   });
@@ -28,8 +28,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxCount: 1}]), async(req, res, next) => {
-    console.log(req.files);
-
     const emailPost = {
         data: {
           subject: req.body.subject,
@@ -88,8 +86,8 @@ router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxC
     }
 
     const mailData = {
-        from: 'hstd-conference@mai.ru',
-        to: 'hstd-conference@mai.ru',
+        from: 'conference-mai@mail.ru',
+        to: 'conference-mai@mail.ru',
         subject: subject,
         text: textBody,
         html: htmlBody,

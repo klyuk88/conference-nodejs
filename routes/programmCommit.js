@@ -12,13 +12,12 @@ router.get('/', async (req, res) => {
                 }
             }
         },
-        sort: ['updatedAt:desc'],
+        sort: ['updatedAt'],
         locale: res.locale
     })
     try {
         const response = await fetch(`${process.env.ADMIN_URL}/api/committees?${query}`)
         const responseData = await response.json()
-        console.log(responseData);
         res.render('programm-committee', {
             pageData: responseData.data
         })

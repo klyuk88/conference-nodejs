@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
                 }
             }
         },
+        sort: ['updatedAt:desc'],
         locale: res.locale
     })
     try {

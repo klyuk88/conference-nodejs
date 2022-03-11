@@ -13,7 +13,8 @@ router.get('/', async (req, res) => {
                     $eq: 'organizaczionnyj'
                 }
             }
-        }
+        },
+        sort: ['updatedAt']
     })
     const queryTech = qs.stringify({
         filters: {
@@ -22,8 +23,10 @@ router.get('/', async (req, res) => {
                     $eq: 'tehnicheskij'
                 }
             }
-        }
+        },
+        sort: ['updatedAt']
     })
+    
     try {
         const responseOrg = await fetch(`${process.env.ADMIN_URL}/api/committees?${queryOrg}&locale=${res.locale}`)
         const responseTech = await fetch(`${process.env.ADMIN_URL}/api/committees?${queryTech}&locale=${res.locale}`)

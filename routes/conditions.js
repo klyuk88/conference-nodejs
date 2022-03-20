@@ -19,7 +19,6 @@ router.get('/', function(req, res, next) {
     const publicationContract = pageData.publication_contract.data ? process.env.ADMIN_URL + pageData.publication_contract.data.attributes.url : '#'
     const afterTableText = converter.makeHtml(pageData.after_table_text)
     const beforeTableText = converter.makeHtml(pageData.before_table_text)
-    console.log(pageData);
     res.render('conditions', {
       metaTitle: 'Условия участия',
       pageData,

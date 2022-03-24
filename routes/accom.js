@@ -8,14 +8,7 @@ const router = express.Router()
 router.get('/', async function(req, res, next) {
   let pageData;
   const query = qs.stringify({
-    populate: {
-      image_1: {
-        filelds: ['url']
-      },
-      image_2: {
-        filelds: ['url']
-      }
-    },
+    populate: '*',
     locale: res.locale
   })
     try {
@@ -23,17 +16,20 @@ router.get('/', async function(req, res, next) {
         if (resp.ok) {
             const respData = await resp.json()
             pageData = respData.data
-
             const paragraph = converter.makeHtml(pageData.attributes.paragraph_2)
-            const image1 = pageData.attributes.image_1 ? process.env.ADMIN_URL + pageData.attributes.image_1.data.attributes.url : '/assets/img/hotel/1.jpg'
-            const image2 = pageData.attributes.image_2 ? process.env.ADMIN_URL + pageData.attributes.image_2.data.attributes.url : '/assets/img/hotel/2.jpg'
+            const imageGallery = pageData.attributes.image_gallery.data
+            const adminUrl = process.env.ADMIN_URL
+            
+            // const image1 = pageData.attributes.image_1 ? process.env.ADMIN_URL + pageData.attributes.image_1.data.attributes.url : '/assets/img/hotel/1.jpg'
+            // const image2 = pageData.attributes.image_2 ? process.env.ADMIN_URL + pageData.attributes.image_2.data.attributes.url : '/assets/img/hotel/2.jpg'
 
             res.render('accommodation', {
                 metaTitle: 'Размещение',
                 pageData,
                 paragraph,
-                image1,
-                image2
+                adminUrl,
+                imageGallery
+
             })
         }
 

@@ -23,11 +23,19 @@ main
             p.text.text-black=pageData.attributes.territory
             p.text=pageData.attributes.territory_2
         p.text=pageData.attributes.paragraph_1
-      .placement-g
-        .placement-g__img-block
-          img(src=image1, alt)
-        .placement-g__img-block
-          img(src=image2, alt)
+        .swiper
+          // Additional required wrapper
+          .swiper-wrapper
+            each slide in imageGallery
+              .swiper-slide
+                img(src=adminUrl + slide.attributes.url, alt)
+
+          // If we need pagination
+          .swiper-pagination
+          // If we need navigation buttons
+          .swiper-button-prev
+          .swiper-button-next
+        
       .text-block.margin-top-45
         .text-wrap!=paragraph
         

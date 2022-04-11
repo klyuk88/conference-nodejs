@@ -14,7 +14,10 @@ router.get('/', async (req, res) => {
                 }
             }
         },
-        sort: ['updatedAt']
+        sort: ['updatedAt'],
+        pagination: {
+            pageSize: 100
+        },
     })
     const queryTech = qs.stringify({
         filters: {
@@ -24,7 +27,10 @@ router.get('/', async (req, res) => {
                 }
             }
         },
-        sort: ['updatedAt']
+        sort: ['updatedAt'],
+        pagination: {
+            pageSize: 100
+        },
     })
     
     try {

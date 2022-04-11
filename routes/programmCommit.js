@@ -13,6 +13,9 @@ router.get('/', async (req, res) => {
             }
         },
         sort: ['updatedAt'],
+        pagination: {
+            pageSize: 100
+        },
         locale: res.locale
     })
     try {

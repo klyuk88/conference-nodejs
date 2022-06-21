@@ -36,6 +36,7 @@ router.post('/', upload.fields([{name: 'file', maxCount: 1},{name: 'file2', maxC
           patronymic: req.body['Отчество'],
           organization: req.body['Организация'],
           email: req.body['Email'],
+          phone: req.body['Phone'],
           post: req.body['Должность'] || 'Данные не соответсвуют типу формы',
           work_name: req.body['Название работы'] || 'Данные не соответсвуют типу формы',
           annotation: req.body['Аннотация'] || 'Данные не соответсвуют типу формы',

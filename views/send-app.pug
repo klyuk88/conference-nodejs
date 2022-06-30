@@ -96,6 +96,26 @@ main
                   li.easySelect__option(data-value='Интеллектуальное управление')=__('main_list_item_10')
                   li.easySelect__option(data-value='Сертификация, эксплуатация')=__('main_list_item_8')
                   li.easySelect__option(data-value='Механика транспортных систем')=__('main_list_item_9')
+     
+          .input-o-w
+            label
+              | #{__('conf_location_title')}
+              span.note-star *
+            .input-i-w
+              .easySelect
+                .easySelect__vis-value
+                  .easySelect__cur-value(data-value).
+                    #{__('conf_location_title')}
+                  input.easySelect__hide-input(type='text', name='Площадка')
+                  .easySelect__arrow
+                    svg(width='21', height='13', viewBox='0 0 21 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                      path(d='M1 1L11 12L20.5 1', stroke='#0C44AC')
+                ul.easySelect__options-list(data-state='rolled', data-hide_checked='false')
+                  li.easySelect__option(data-value='Алушта')=__('conf_location')
+                  li.easySelect__option(data-value='Сириус')=__('conf_location_1')
+
+
+        
           if locale === 'ru'
             .input-o-w
               label(for='expert-opinion')

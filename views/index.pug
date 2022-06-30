@@ -17,8 +17,13 @@ section.hero
       .hero__date
         p=homeData.dates
       .hero__institute
-        p.hero__institute-fn=__('main_mai_title')
+        //- p.hero__institute-fn=__('main_mai_title')
         p.hero__institute-sn=__('main_mai_subtitle')
+      .hero__date(style="margin-top: 30px")
+        p=__('main_next_conf_date')
+      .hero__institute
+        p.hero__institute-sn=__('main_next_conf')
+
       .hero__detail
         a(href='#')=__('main_btn')
       .hero__next-screen

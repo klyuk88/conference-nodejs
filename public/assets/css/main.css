@@ -3166,3 +3166,18 @@ main {
   top: 0;
   left: 0;
 }
+.alert-text-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.main-page-alert {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  padding: 5px;
+  background: red;
+  display: inline-block;
+  margin: 0 auto;
+}
